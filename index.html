@@ -4,132 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Save Giriraj Shatrunjay</title>
-<meta name="description" content="Send an email demanding accountability for the excavation and construction on Giriraj Shatrunjay.">
 <meta property="og:title" content="Save Giriraj Shatrunjay – Send your email">
-<meta property="og:description" content="One tap opens your email app with the letter ready. Just press Send.">
+<meta property="og:description" content="Tap to open your email app with the letter ready. Just press Send.">
 <meta property="og:image" content="photos.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #fbf7f0;
-    --card: #ffffff;
-    --text: #2a2118;
-    --muted: #6f6253;
-    --accent: #c2410c;
-    --accent-dark: #9a3412;
-    --border: #eadfce;
-    --soft: #fdf1e4;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #17130f;
-      --card: #221c16;
-      --text: #f3ece3;
-      --muted: #b6a896;
-      --accent: #f97316;
-      --accent-dark: #ea580c;
-      --border: #3a3027;
-      --soft: #2c221a;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "Inter", "Noto Sans Gujarati", system-ui, sans-serif;
-    line-height: 1.6;
-  }
-  .wrap { max-width: 680px; margin: 0 auto; padding: 24px 16px 64px; }
-  h1 { font-size: 1.7rem; line-height: 1.25; margin: 8px 0 6px; }
-  .lead { color: var(--muted); margin: 0 0 20px; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 18px;
-    margin-bottom: 18px;
-  }
-  label { font-weight: 600; display: block; margin-bottom: 6px; }
-  input[type=text] {
-    width: 100%;
-    font: inherit;
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--text);
-  }
-  .langs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
-  .langs button {
-    font: inherit; padding: 8px 14px; border-radius: 999px; cursor: pointer;
-    border: 1px solid var(--border); background: var(--bg); color: var(--text);
-  }
-  .langs button[aria-pressed=true] { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .send {
-    display: block; width: 100%; text-align: center; text-decoration: none;
-    background: var(--accent); color: #fff; font-weight: 700; font-size: 1.15rem;
-    padding: 16px; border-radius: 12px; margin-top: 16px; border: 0; cursor: pointer;
-  }
-  .send:hover { background: var(--accent-dark); }
-  .alt { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
-  .alt a, .alt button {
-    flex: 1 1 140px; text-align: center; text-decoration: none; font: inherit; font-weight: 600;
-    padding: 12px; border-radius: 10px; border: 1px solid var(--border);
-    background: var(--soft); color: var(--text); cursor: pointer;
-  }
-  .hint { font-size: .9rem; color: var(--muted); margin: 10px 0 0; }
-  .meta { font-size: .92rem; margin: 0 0 10px; word-break: break-word; }
-  .meta b { color: var(--muted); font-weight: 600; }
-  pre {
-    white-space: pre-wrap; word-wrap: break-word; margin: 0;
-    font-family: inherit; font-size: .95rem;
-  }
-  img { width: 100%; height: auto; border-radius: 10px; display: block; }
-  .toast {
-    position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%);
-    background: var(--text); color: var(--bg); padding: 10px 16px; border-radius: 999px;
-    opacity: 0; transition: opacity .2s; pointer-events: none;
-  }
-  .toast.show { opacity: 1; }
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+         background: #fbf7f0; font-family: system-ui, sans-serif; padding: 16px; box-sizing: border-box; }
+  a { background: #c2410c; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.2rem;
+      padding: 18px 28px; border-radius: 12px; text-align: center; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>ગિરિરાજ શત્રુંજયની રક્ષા માટે ઈમેલ મોકલો</h1>
-  <p class="lead">Send an email demanding accountability for Giriraj Shatrunjay. Tap the button, your email app opens with the letter ready, then press <b>Send</b>.</p>
-
-  <div class="card">
-    <label for="name">તમારું નામ / Your name</label>
-    <input id="name" type="text" placeholder="e.g. Rajesh Shah, Mumbai" autocomplete="name">
-    <div class="langs" role="group" aria-label="Email language">
-      <button type="button" data-lang="both" aria-pressed="true">ગુજરાતી + English</button>
-      <button type="button" data-lang="gu" aria-pressed="false">ગુજરાતી</button>
-      <button type="button" data-lang="en" aria-pressed="false">English</button>
-    </div>
-    <a id="mailto" class="send" href="#">📧 ઈમેલ મોકલો / Send Email</a>
-    <div class="alt">
-      <a id="gmail" href="#" target="_blank" rel="noopener">Open in Gmail</a>
-      <button id="copy" type="button">Copy email text</button>
-    </div>
-    <p class="hint">If nothing opens, use “Copy email text” and paste it into a new email to the addresses below (keep the Bcc).</p>
-  </div>
-
-  <div class="card">
-    <p class="meta"><b>To:</b> <span id="to"></span></p>
-    <p class="meta"><b>Bcc:</b> <span id="bcc"></span></p>
-    <p class="meta"><b>Subject:</b> <span id="subject"></span></p>
-    <pre id="preview"></pre>
-  </div>
-
-  <div class="card">
-    <label>ગિરિરાજ પર થયેલું ખોદકામ / Excavation on Giriraj</label>
-    <img src="photos.jpg" alt="Four photos showing excavated earth, broken rock and a newly cut road on Giriraj Shatrunjay">
-  </div>
-</div>
-<div class="toast" id="toast">Copied</div>
-
+<a id="mail" href="#">📧 ઈમેલ ખોલો / Open Email</a>
 <script>
   const TO = ["shripal60@yahoo.in", "shree_sangh@yahoo.com", "atul_mdahd@atul.co.in", "abhayfoundation1@gmail.com"];
   const BCC = ["shatrunjaygiriraj1@gmail.com"];
@@ -177,58 +63,12 @@ We therefore urge the trustees to take this matter seriously and call upon Shri 
 
 The protection of Shri Shatrunjay Giriraj must come before any individual's position or authority.`;
 
-  let lang = "both";
-  try { lang = localStorage.getItem("lang") || "both"; } catch (e) {}
+  const photos = "Photographs of the excavation on Giriraj: " + new URL("photos.jpg", location.href).href;
+  const body = `${GU}\n\n──────────\n\n${EN}\n\n${photos}\n\nRegards,\n[Your Name]`;
+  const url = `mailto:${TO.join(",")}?bcc=${encodeURIComponent(BCC.join(","))}&subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(body)}`;
 
-  const $ = (id) => document.getElementById(id);
-  const photoUrl = new URL("photos.jpg", location.href).href;
-
-  function body() {
-    const name = $("name").value.trim() || "[Your Name]";
-    const photos = `Photographs of the excavation on Giriraj: ${photoUrl}`;
-    const enSigned = `${EN}\n\n${photos}\n\nRegards,\n${name}`;
-    const guSigned = `${GU}\n\n${photos}\n\n${name}`;
-    if (lang === "en") return enSigned;
-    if (lang === "gu") return guSigned;
-    return `${GU}\n\n──────────\n\n${EN}\n\n${photos}\n\nRegards,\n${name}`;
-  }
-
-  function update() {
-    const b = body();
-    const to = TO.join(",");
-    $("to").textContent = TO.join(", ");
-    $("subject").textContent = SUBJECT;
-    $("preview").textContent = b;
-    const bcc = BCC.join(",");
-    $("bcc").textContent = BCC.join(", ");
-    $("mailto").href = `mailto:${to}?bcc=${encodeURIComponent(bcc)}&subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(b)}`;
-    $("gmail").href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&bcc=${encodeURIComponent(bcc)}&su=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(b)}`;
-    document.querySelectorAll(".langs button").forEach((btn) =>
-      btn.setAttribute("aria-pressed", btn.dataset.lang === lang));
-  }
-
-  document.querySelectorAll(".langs button").forEach((btn) =>
-    btn.addEventListener("click", () => {
-      lang = btn.dataset.lang;
-      try { localStorage.setItem("lang", lang); } catch (e) {}
-      update();
-    }));
-  $("name").addEventListener("input", update);
-
-  $("copy").addEventListener("click", async () => {
-    const text = `To: ${TO.join(", ")}\nBcc: ${BCC.join(", ")}\nSubject: ${SUBJECT}\n\n${body()}`;
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch (e) {
-      const ta = document.createElement("textarea");
-      ta.value = text; document.body.appendChild(ta); ta.select();
-      document.execCommand("copy"); ta.remove();
-    }
-    $("toast").classList.add("show");
-    setTimeout(() => $("toast").classList.remove("show"), 1500);
-  });
-
-  update();
+  document.getElementById("mail").href = url;
+  location.href = url;
 </script>
 </body>
 </html>
