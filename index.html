@@ -73,11 +73,9 @@ We therefore urge the trustees to take this matter seriously and call upon Shri 
 
 The protection of Shri Shatrunjay Giriraj must come before any individual's position or authority.`;
 
-  const body = `${new URL("photos.jpg", location.href).href}\n\n${EN}`;
-
   document.getElementById("gu").textContent = GU;
   document.getElementById("send").href =
-    `mailto:${TO.join(",")}?bcc=${encodeURIComponent(BCC.join(","))}&subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(body)}`;
+    `mailto:${TO.join(",")}?bcc=${encodeURIComponent(BCC.join(","))}&subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(EN)}`;
 </script>
 </body>
 </html>
