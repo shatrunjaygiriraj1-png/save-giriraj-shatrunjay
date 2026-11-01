@@ -34,6 +34,7 @@
 <script>
   const TO = ["shripal60@yahoo.in", "shree_sangh@yahoo.com", "atul_mdahd@atul.co.in", "abhayfoundation1@gmail.com"];
   const BCC = ["shatrunjaygiriraj1@gmail.com"];
+  const SUBJECT = "Request for Resignation of the Trustee Responsible for Activities Affecting the Highly Sacred Shri Shatrunjay Giriraj";
 
   const GU = `રોહિશાળામાં ભગવાનનાં પગલાં ખંડિત થયા અને સમગ્ર જૈન સંઘ માં રોષ ફાટી નીકળ્યો. લાખો માણસોની રેલીઓ દરેક શહેરોમાં નીકળી. ખુદ સરકારને પણ નોંધ લેવી પડી. કડકમાં કડક પગલાં ભરવા પડ્યા.
 આજે આખો ગિરિરાજ ખંડિત થયો છે, (ખોટું) ખંડિત કરવામાં આવ્યો છે અને ગુનેગારો માત્ર sorry બોલે એટલે એમને માફી આપી દેવાની ? શું આને ક્ષમા કહેવાય ? કાયરતા કહેવાય ? કે શ્રીમંતોની આરતી કહેવાય ? સૌ પ્રથમ ગિરિરાજને ખંડિત કરનાર, તેનો બચાવ કરનાર ટ્રસ્ટી એ રાજીનામુ આપવું જ જોઈએ.
@@ -76,7 +77,7 @@ The protection of Shri Shatrunjay Giriraj must come before any individual's posi
 
   document.getElementById("gu").textContent = GU;
   document.getElementById("send").href =
-    `mailto:${TO.join(",")}?bcc=${encodeURIComponent(BCC.join(","))}&body=${encodeURIComponent(body)}`;
+    `mailto:${TO.join(",")}?bcc=${encodeURIComponent(BCC.join(","))}&subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(body)}`;
 </script>
 </body>
 </html>
