@@ -63,8 +63,8 @@ We therefore urge the trustees to take this matter seriously and call upon Shri 
 
 The protection of Shri Shatrunjay Giriraj must come before any individual's position or authority.`;
 
-  const photos = "Photographs of the excavation on Giriraj: " + new URL("photos.jpg", location.href).href;
-  const body = `${GU}\n\n──────────\n\n${EN}\n\n${photos}\n\nRegards,\n[Your Name]`;
+  const photos = "📷 ગિરિરાજ પર થયેલા ખોદકામના ફોટા / Photos of the excavation on Giriraj:\n" + new URL("photos.jpg", location.href).href;
+  const body = `${photos}\n\n──────────\n\n${GU}\n\n──────────\n\n${EN}\n\n${photos}\n\nRegards,\n[Your Name]`;
   const url = `mailto:${TO.join(",")}?bcc=${encodeURIComponent(BCC.join(","))}&subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(body)}`;
 
   document.getElementById("mail").href = url;
