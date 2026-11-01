@@ -4,22 +4,38 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Save Giriraj Shatrunjay</title>
-<meta property="og:title" content="Save Giriraj Shatrunjay – Send your email">
-<meta property="og:description" content="Tap to open your email app with the letter ready. Just press Send.">
+<meta property="og:title" content="Save Giriraj Shatrunjay">
+<meta property="og:description" content="See the photos and send your email.">
 <meta property="og:image" content="photos.jpg">
 <style>
-  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
-         background: #fbf7f0; font-family: system-ui, sans-serif; padding: 16px; box-sizing: border-box; }
-  a { background: #c2410c; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.2rem;
-      padding: 18px 28px; border-radius: 12px; text-align: center; }
+  :root { --bg: #fbf7f0; --card: #fff; --text: #2a2118; --accent: #c2410c; --border: #eadfce; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #17130f; --card: #221c16; --text: #f3ece3; --accent: #f97316; --border: #3a3027; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font-family: "Noto Sans Gujarati", system-ui, sans-serif; line-height: 1.6; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 16px 16px 110px; }
+  img { width: 100%; height: auto; border-radius: 12px; display: block; margin-bottom: 16px; }
+  pre { white-space: pre-wrap; word-wrap: break-word; margin: 0 0 16px; font-family: inherit; font-size: 1rem;
+        background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .bar { position: fixed; left: 0; right: 0; bottom: 0; padding: 12px 16px;
+         background: var(--bg); border-top: 1px solid var(--border); }
+  .send { display: block; max-width: 680px; margin: 0 auto; text-align: center; text-decoration: none;
+          background: var(--accent); color: #fff; font-weight: 700; font-size: 1.2rem;
+          padding: 16px; border-radius: 12px; }
 </style>
 </head>
 <body>
-<a id="mail" href="#">📧 ઈમેલ ખોલો / Open Email</a>
+<div class="wrap">
+  <img src="photos.jpg" alt="Excavation, broken rock and a newly cut road on Giriraj Shatrunjay">
+  <pre id="gu"></pre>
+  <pre id="en"></pre>
+</div>
+<div class="bar"><a id="send" class="send" href="#">📧 ઈમેલ મોકલો / Send Email</a></div>
 <script>
   const TO = ["shripal60@yahoo.in", "shree_sangh@yahoo.com", "atul_mdahd@atul.co.in", "abhayfoundation1@gmail.com"];
   const BCC = ["shatrunjaygiriraj1@gmail.com"];
-  const SUBJECT = "Demand for Accountability on Giriraj Shatrunjay – Shri Shripalbhai Must Resign";
 
   const GU = `જય જિનેન્દ્ર.
 
@@ -64,11 +80,12 @@ We therefore urge the trustees to take this matter seriously and call upon Shri 
 The protection of Shri Shatrunjay Giriraj must come before any individual's position or authority.`;
 
   const photos = "📷 ગિરિરાજ પર થયેલા ખોદકામના ફોટા / Photos of the excavation on Giriraj:\n" + new URL("photos.jpg", location.href).href;
-  const body = `${photos}\n\n──────────\n\n${GU}\n\n──────────\n\n${EN}\n\n${photos}\n\nRegards,\n[Your Name]`;
-  const url = `mailto:${TO.join(",")}?bcc=${encodeURIComponent(BCC.join(","))}&subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(body)}`;
+  const body = `${photos}\n\n──────────\n\n${GU}\n\n──────────\n\n${EN}`;
 
-  document.getElementById("mail").href = url;
-  location.href = url;
+  document.getElementById("gu").textContent = GU;
+  document.getElementById("en").textContent = EN;
+  document.getElementById("send").href =
+    `mailto:${TO.join(",")}?bcc=${encodeURIComponent(BCC.join(","))}&body=${encodeURIComponent(body)}`;
 </script>
 </body>
 </html>
